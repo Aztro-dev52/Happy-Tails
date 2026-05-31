@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+:root {
+    --laranja-marca: #FF8c42;
+    --laranja-marca-secundario: #ba4b05;
+    --verde-whatsapp: #25d366;
+    --verde-escuro: #128C7E;
+    --bege-claro: #FFF8F0;
+    --marrom-titulo: #5D4073;
+    --cinza-texto: #4A4A4A;
+    --branco: #FFF;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background: var(--bege-claro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px 0;
+}
+.header {
+    animation: aparecer 0.6s ease forwards;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
+    margin-top: -10px;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 20px;
+    min-height: 160px;
+    padding: 50px;
+    background-color: var(--laranja-marca);
+}
+
+.chamarzapmenor {
+    animation: aparecer  0.6s ease;
+    background-color: var(--verde-whatsapp);
+    color: var(--branco);
+    font-weight: 700;
+    border: none;
+    border-radius: 20px;
+    padding: 15px;
+    width: 50%;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.chamarzapmenor:hover {
+    transform: scale(1.03);
+    box-shadow: 2px 5px 5px var(--verde-escuro);
+
+}
+
+
+.header img {
+    max-width: 1200px;
+    height: auto;
+    object-fit: contain;
+}
+
+.hero-section {
+    animation: aparecer 0.6s ease forwards;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+    background: var(--laranja-marca);
+    gap: 20px;
+    padding: 50px;
+    color: var(--branco);
+}
+
+.chamarzapmaior {
+    animation: aparecer 0.6s ease forwards;
+    padding: 30px;
+    font-size: 15px;
+    background: var(--verde-whatsapp);
+    color: var(--branco);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 40%;
+    transition: all 0.3s ease;
+}
+.chamarzapmaior:hover {
+    transform: scale(1.03);
+    box-shadow: 2px 5px 8px var(--verde-escuro);
+
+}
+
+.services {
+    animation: aparecer 0.6s ease forwards;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background: linear-gradient(to bottom right, var(--laranja-marca), var(--laranja-marca-secundario));
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.footer{
+    animation: aparecer 0.6s ease forwards;
+    background: var(--marrom-titulo);
+    color: var(--branco);
+    padding: 30px;
+    border-radius: 20px;
+    gap: 10px;
+    text-align: center;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 760px) {
+    .header img {
+        max-width: 90%;
+    }
+    .chamarzapmaior,
+    .chamarzapmenor {
+        width: 90%;
+    }
+    .hero-section img {
+        max-width: 90%;
+    }
+    .services {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .header, .hero-section {
+        padding: 30px, 20px;
+    }
+
+}
